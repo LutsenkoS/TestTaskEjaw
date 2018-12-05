@@ -1,0 +1,13 @@
+{
+    "Names": [
+        {
+            "Name": "cube"
+        },
+        {
+            "Name": "capsule"
+        },
+        {
+            "Name": "sphere"
+        }
+    ]
+}

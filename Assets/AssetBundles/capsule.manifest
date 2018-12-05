@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 2883083796
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 15405052c891c20195eb49ebed7f5977
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 061176ec9ce0b20efc583fa4955cc552
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 744901928de57204fa459417f8026967, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f38f067590e8134986df87ae95a1213, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/Capsule.prefab
+Dependencies: []
