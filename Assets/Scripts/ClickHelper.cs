@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ClickHelper : MonoBehaviour//, IPointerClickHandler
-{ 
+{
     private GameData _gameData;
-    private GameObject _model;
+    private GeometryObjectModel _model;
     private DataController _dataController;
     private bool _prefabLoaded;
     private float _startTime;
@@ -25,10 +25,12 @@ public class ClickHelper : MonoBehaviour//, IPointerClickHandler
             OnMouseClick(Input.mousePosition);
         }
         if (_prefabLoaded)
-            if (Time.time - _startTime > _gameData.ObservableTime && !_lockFigure)
+            if (Time.time - _startTime > _gameData.ObservableTime)
             {
-                _lockFigure = true;
-                _model.GetComponent<GeometryObjectModel>().SetColor();
+                if (!_lockFigure)
+                    _lockFigure = true;
+                _model.SetColor();
+                _startTime = Time.time;
             }
     }
 
@@ -38,7 +40,7 @@ public class ClickHelper : MonoBehaviour//, IPointerClickHandler
         {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos);
             GameObject GO = LoadAssetBundles.LoadAssetBundle(_dataController.prefabs[Random.Range(0, _dataController.prefabs.Length)].Name);
-            _model = Instantiate(GO, new Vector3(worldPos.x, worldPos.y, 0), Quaternion.identity);
+            _model = Instantiate(GO, new Vector3(worldPos.x, worldPos.y, 0), Quaternion.identity).GetComponent<GeometryObjectModel>();
             _prefabLoaded = true;
             _startTime = Time.time;
             return;

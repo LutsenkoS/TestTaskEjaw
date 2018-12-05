@@ -14,6 +14,7 @@ public class GeometryObjectModel : MonoBehaviour
     {
         _objRenderer = GetComponent<Renderer>();
         _geometryObjectData = Resources.Load<GeometryObjectData>(gameObject.name.Substring(0, gameObject.name.IndexOf('(')) + "Data");
+        ClickCount = 0;
     }
 
     public void Clicked()
